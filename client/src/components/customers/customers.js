@@ -7,7 +7,7 @@ class Customers extends Component {
     super();
 
     this.state = {
-      customer: []
+      customers: []
     }
   }
 
@@ -21,6 +21,12 @@ class Customers extends Component {
     return (
       <div>
         <h2>Customers</h2>
+        <ul>
+          {this.state.customers.map(customer =>
+              <li key={customer.id}>{customer.firstName} {customer.lastName}</li>
+            )}
+
+        </ul>
       </div>
     );
   }
