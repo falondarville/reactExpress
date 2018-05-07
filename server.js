@@ -1,7 +1,8 @@
 const express = require('express');
+
 const app = express();
 
-app.get('/api/customers', () => (req, res) => {
+app.get('/api/customers', (req, res) => {
 
 	// instead of hard coding, this is where the information will be pulled from the database
 	const customers = [
